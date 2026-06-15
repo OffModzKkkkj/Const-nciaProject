@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, jsonify
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=".", static_folder=".", static_url_path="")
 
 DB_PATH = "leads.db"
 CSV_PATH = "leads.csv"
